@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><marquee><h2><font color="lime">Group Fund Queue Management</font></h2></marquee>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Summit Banking :: An Experience of Getting Every Service</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<script> 
+message = new Array(6);
+message[0] = "M.C.A 6th Semester, Reg No:-521110445";
+message[1] = "This project is created by Ashim Sarkar";  
+message[2] = "Study centre Zakir husain institute Ranchi";  
+message[3] = "Software requirments are NetBeans,Sql server";  
+message[4] = "As a partial requirement for M.C.A course from S.M.U";  
+message[5] = "Project is created by using Html,Javascript,Css,Servlet and Jsp";  
+var showmsg = true;
+function nextMessage() {
+  if (!showmsg) {
+    window.setTimeout("nextMessage()",2000);
+    showmsg = true;
+    return;
+  }
+  index = Math.floor(message.length * Math.random());
+  window.status = message[index];
+  window.setTimeout("nextMessage()",2000);
+}   
+nextMessage();  
+</script> 
+
+</head>
+<body>
+<SCRIPT language=JavaScript> 
+dCol='cc0099';//date colour.
+fCol='ff99cc';//face colour.
+sCol='cc99ff';//seconds colour.
+mCol='008000';//minutes colour.
+hCol='000080';//hours colour.
+ClockHeight=40;
+ClockWidth=40;
+ClockFromMouseY=0;
+ClockFromMouseX=100;
+d=new Array("SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY");
+m=new Array("JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER");
+date=new Date();
+day=date.getDate();
+year=date.getYear();
+if (year < 2000) year=year+1900;
+TodaysDate=" "+d[date.getDay()]+" "+day+" "+m[date.getMonth()]+" "+year;
+D=TodaysDate.split('');
+H='ooo';
+H=H.split('');
+M='oooo';
+M=M.split('');
+S='.....';
+S=S.split('');
+
+Face='1 2 3 4 5 6 7 8 9 10 11 12';
+
+font='tohoma';
+
+size=1;
+
+speed=0.6;
+
+ns=(document.layers);
+
+ie=(document.all);
+
+Face=Face.split(' ');
+
+n=Face.length;
+
+a=size*10;
+
+ymouse=0;
+
+xmouse=0;
+
+scrll=0;
+
+props="<font face="+font+" size="+size+" color="+fCol+"><B>";
+
+props2="<font face="+font+" size="+size+" color="+dCol+"><B>";
+
+Split=360/n;
+
+Dsplit=360/D.length;
+
+HandHeight=ClockHeight/4.5
+
+HandWidth=ClockWidth/4.5
+
+HandY=-7;
+
+HandX=-2.5;
+
+scrll=0;
+
+step=0.06;
+
+currStep=0;
+
+y=new Array();x=new Array();Y=new Array();X=new Array();
+
+for (i=0; i < n; i++){y[i]=0;x[i]=0;Y[i]=0;X[i]=0}
+
+Dy=new Array();Dx=new Array();DY=new Array();DX=new Array();
+
+for (i=0; i < D.length; i++){Dy[i]=0;Dx[i]=0;DY[i]=0;DX[i]=0}
+
+if (ns){
+
+for (i=0; i < D.length; i++)
+
+document.write('<layer name="nsDate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+D[i]+'</font></center></layer>');
+
+for (i=0; i < n; i++)
+
+document.write('<layer name="nsFace'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+Face[i]+'</font></center></layer>');
+
+for (i=0; i < S.length; i++)
+
+document.write('<layer name=nsSeconds'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+sCol+'><center><b>'+S[i]+'</b></center></font></layer>');
+
+for (i=0; i < M.length; i++)
+
+document.write('<layer name=nsMinutes'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+mCol+'><center><b>'+M[i]+'</b></center></font></layer>');
+
+for (i=0; i < H.length; i++)
+
+document.write('<layer name=nsHours'+i+' top=0 left=0 width=15 height=15><font face=Arial size=3 color='+hCol+'><center><b>'+H[i]+'</b></center></font></layer>');
+
+}
+
+if (ie){
+
+document.write('<div id="Od" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+for (i=0; i < D.length; i++)
+
+document.write('<div id="ieDate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+D[i]+'</B></font></div>');
+
+document.write('</div></div>');
+
+document.write('<div id="Of" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+for (i=0; i < n; i++)
+
+document.write('<div id="ieFace" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+Face[i]+'</B></font></div>');
+
+document.write('</div></div>');
+
+document.write('<div id="Oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+for (i=0; i < H.length; i++)
+
+document.write('<div id="ieHours" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+hCol+';text-align:center;font-weight:bold">'+H[i]+'</div>');
+
+document.write('</div></div>');
+
+document.write('<div id="Om" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+for (i=0; i < M.length; i++)
+
+document.write('<div id="ieMinutes" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+mCol+';text-align:center;font-weight:bold">'+M[i]+'</div>');
+
+document.write('</div></div>')
+
+document.write('<div id="Os" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+
+for (i=0; i < S.length; i++)
+
+document.write('<div id="ieSeconds" style="position:absolute;width:16px;height:16px;font-family:Arial;font-size:16px;color:'+sCol+';text-align:center;font-weight:bold">'+S[i]+'</div>');
+
+document.write('</div></div>')
+
+}
+
+(ns)?window.captureEvents(Event.MOUSEMOVE):0;
+
+function Mouse(evnt){
+
+ymouse = (ns)?evnt.pageY+ClockFromMouseY-(window.pageYOffset):event.y+ClockFromMouseY;
+xmouse = (ns)?evnt.pageX+ClockFromMouseX:event.x+ClockFromMouseX;
+}
+
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+
+function ClockAndAssign(){
+
+time = new Date ();
+
+secs = time.getSeconds();
+
+sec = -1.57 + Math.PI * secs/30;
+
+mins = time.getMinutes();
+
+min = -1.57 + Math.PI * mins/30;
+
+hr = time.getHours();
+
+hrs = -1.575 + Math.PI * hr/6+Math.PI*parseInt(time.getMinutes())/360;
+
+if (ie){
+
+Od.style.top=window.document.body.scrollTop;
+
+Of.style.top=window.document.body.scrollTop;
+
+Oh.style.top=window.document.body.scrollTop;
+
+Om.style.top=window.document.body.scrollTop;
+
+Os.style.top=window.document.body.scrollTop;
+
+}
+for (i=0; i < n; i++){
+ var F=(ns)?document.layers['nsFace'+i]:ieFace[i].style;
+ F.top=y[i] + ClockHeight*Math.sin(-1.0471 + i*Split*Math.PI/180)+scrll;
+ F.left=x[i] + ClockWidth*Math.cos(-1.0471 + i*Split*Math.PI/180);
+ }
+for (i=0; i < H.length; i++){
+ var HL=(ns)?document.layers['nsHours'+i]:ieHours[i].style;
+ HL.top=y[i]+HandY+(i*HandHeight)*Math.sin(hrs)+scrll;
+ HL.left=x[i]+HandX+(i*HandWidth)*Math.cos(hrs);
+ }
+for (i=0; i < M.length; i++){
+
+ var ML=(ns)?document.layers['nsMinutes'+i]:ieMinutes[i].style;
+
+ ML.top=y[i]+HandY+(i*HandHeight)*Math.sin(min)+scrll;
+
+ ML.left=x[i]+HandX+(i*HandWidth)*Math.cos(min);
+
+ }
+
+for (i=0; i < S.length; i++){
+
+ var SL=(ns)?document.layers['nsSeconds'+i]:ieSeconds[i].style;
+
+ SL.top=y[i]+HandY+(i*HandHeight)*Math.sin(sec)+scrll;
+
+ SL.left=x[i]+HandX+(i*HandWidth)*Math.cos(sec);
+
+ }
+
+for (i=0; i < D.length; i++){
+
+ var DL=(ns)?document.layers['nsDate'+i]:ieDate[i].style;
+
+ DL.top=Dy[i] + ClockHeight*1.5*Math.sin(currStep+i*Dsplit*Math.PI/180)+scrll;
+
+ DL.left=Dx[i] + ClockWidth*1.5*Math.cos(currStep+i*Dsplit*Math.PI/180);
+
+ }
+
+currStep-=step;
+
+}
+
+function Delay(){
+
+scrll=(ns)?window.pageYOffset:0;
+
+Dy[0]=Math.round(DY[0]+=((ymouse)-DY[0])*speed);
+
+Dx[0]=Math.round(DX[0]+=((xmouse)-DX[0])*speed);
+
+for (i=1; i < D.length; i++){
+
+Dy[i]=Math.round(DY[i]+=(Dy[i-1]-DY[i])*speed);
+
+Dx[i]=Math.round(DX[i]+=(Dx[i-1]-DX[i])*speed);
+
+}
+
+y[0]=Math.round(Y[0]+=((ymouse)-Y[0])*speed);
+
+x[0]=Math.round(X[0]+=((xmouse)-X[0])*speed);
+
+for (i=1; i < n; i++){
+
+y[i]=Math.round(Y[i]+=(y[i-1]-Y[i])*speed);
+
+x[i]=Math.round(X[i]+=(x[i-1]-X[i])*speed);
+
+}
+ClockAndAssign();
+
+setTimeout('Delay()',20);
+
+}
+
+if (ns||ie)window.onload=Delay;
+                      </SCRIPT>
+
+<div id="content">
+<div id="back">
+<!-- header begins -->
+        <div id="header">
+        <font color="blue"><h1>Summit Banking</h1></font>
+        <font color="red">We believe in customers we believe in you</font>
+	<div id="logo">
+		<h1><a href="#"><h2>Summit Banking</h2></a></h1>
+		<h2><a href="#">We believe in customers we believe in you</a></h2>
+	</div>
+  <div id="menu">
+		<ul>
+                        <li><a href="home.html"><font color="blue">Home</font></a></li>
+                        <li><a href="loan.html"><font color="black">Products</font></a></li>
+                        <li><a href="login.html"><font color="blue">Queue</font></a></li>
+                        <li><a href="admin.html"><font color="black">Official's</font></a></li>
+                    <li><a href="About.html"><font color="blue">About</font></a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+		<div class="box">
+			 <div class="box2">
+				<h4><a href="#">Welcome To Our Website: Home Page</a></h4><br />
+                        Summit Bank is a multinational bank with 1700 branches and 8000 ATM enters around the world. It employs over 10000 people.
+Summit Bank offers various services,such as savings accounts, current accounts and fixed deposite schemes.In addition,it offers various investment options to its 3 million customers.
+Summit witnessed proliferated growth ever since it offered “No Documents Required” loan schemes and higher credit and cash withdrawl limits on its credit and debit cards. These innovative campaigns led to its exponential growth.The customer base has increased by 100%.
+
+<BR><BR><img src="discount.jpg" height="150" width="450">
+			
+				</div></div>
+				 
+				 
+				
+	</div>
+	<div id="left">		
+			<h3>Banking</h3>
+			<ul id="arc">
+				  <li>Summit Banking publishes all its Latest News and related information in this section.
+
+Please visit this section to stay up-to-date with public announcements and releases made by Summit Bank</li>
+				 				  
+				  </ul>
+			  
+			<h3>Latest News</h3>
+			<ul>
+				<li id="calendar">			
+				<div id="calendar1">
+					Click Here Latest News 
+				</div>
+			</li>
+		  </ul>
+		  <h3>Latest Offer</h3>
+			<ul>
+				<li><p>Educational and home loan rates has been revised as per RBI direction. <a href="#">More...</a></p></li>
+			</ul>
+			<br />
+	</div>
+<!--content ends -->
+<!--footer begins -->
+	</div>
+
+<div id="footer">
+<p>Copyright &copy; 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">PARTNER</abbr></a> | <a href="#" title="This page validates as CSS"><abbr title="Cascading Style Sheets">SHOPPING</abbr></a></p> 
+	<p>Developed by Ashim Sarkar</a>
+		</p>
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+</body>
+</html>

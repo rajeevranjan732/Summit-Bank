@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <span id=tick2>
+
+</span>
+   
+<!-- DW6 -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Summit Banking :: An Experience of Getting Every Service</title>
+<script language="javascript">
+
+function valid(form)
+{	
+	
+
+	var v1=form.login;
+	var v2=form.password;
+        var v3=v1.value;
+        var v4=v2.value;
+	
+	if(v3.length==0)
+	{	alert("Please enter your loginid");
+		v1.focus();
+		return false;
+	}
+	if(v4.length==0)
+	{
+		alert("Please enter a password");
+		v2.focus();
+		return false;
+	}
+	
+
+}
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<script language="JavaScript">
+
+function flashit(){
+if (!document.all)
+return
+if (myexample.style.borderColor=="lime")
+myexample.style.borderColor="red"
+else
+myexample.style.borderColor="lime"
+}
+setInterval("flashit()", 500)
+
+</script>
+<div id="content">
+<div id="back">
+<!-- header begins -->
+<div id="header"> 
+        <font color="blue"><h1>Summit Banking</h1></font>
+        <font color="red">We believe in customers we believe in you</font>
+	<div id="logo">
+		<h1><a href="#">Summit Banking</a></h1>
+		<h2><a href="#">An Experience of Getting Every Service</a></h2>
+	</div>
+  <div id="menu">
+		<ul>
+			 <li><a href="home.html">Home</a></li>
+			<li><a href="loan.html">Products</a></li>
+			<li><a href="login.html">Queue</a></li>
+			<li><a href="admin.html">Official's</a></li>
+			<li><a href="About.html">About</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+		<div class="box">
+			 <div class="box2">
+			<h4><a href="#">Queue Management System (Login Required)</a></h4><br />
+		 <form onSubmit="return valid(this)" action="login.view" method="post">
+          
+          <center>
+              
+              <TABLE BORDER=8 bordercolor=#00BFFF  id="myexample">
+                  <TR bordercolor=purple>
+                      <td>User Name</td>
+                      <td><Input type=text name="login"></td>
+                  </TR>
+                  <TR bordercolor=purple>
+                      <TD>Password</td>
+                      <TD><Input type=password name="password"> </TD>
+                  </TR>
+                  
+          </TABLE></center>	
+          <BR>
+         
+          <center><Input type=Submit  value="Login"></center>
+          
+          <br><br>
+          <h4>For Customers: <A HREF="signup1.html"><font color=#8b0000>Generate Your Coupon Id</font></A></h4>
+         <br>
+         <br>
+         <br>
+         <br>
+         <h4> <A HREF="admin.html"><font color=red>Admin User</font></A></H4>
+          <br><br>
+      </form>
+		
+				</div></div>
+				 
+				 
+				
+	</div>
+	<div id="left">		
+			<h3>Currency Converter</h3>
+			<ul id="arc">
+				  <li><a href="Converter.html">Click here to Convert</a></li>
+				 				  
+				  </ul>
+			  
+			<h3>Latest News</h3>
+			<ul>
+				<li id="calendar">			
+				<div id="calendar1">
+					Educational and home loan rates has been revised as per RBI direction. <a href="#">More...</a>
+				</div>
+			</li>
+		  </ul>
+		  <h3>Latest Offer</h3>
+			<ul>
+				<li><p>Buy Dreamplaex ticket with your online account</p></li>
+			</ul>
+			<br />
+	</div>
+<!--content ends -->
+<!--footer begins -->
+	</div>
+
+<div id="footer">
+<p>Copyright &copy; 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">PARTNER</abbr></a> | <a href="#" title="This page validates as CSS"><abbr title="Cascading Style Sheets">SHOPPING</abbr></a></p> 
+	<p>Designed by Ashim Sarkar</a>
+		</p>
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+</body>
+</html>

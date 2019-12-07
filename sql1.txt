@@ -1,0 +1,99 @@
+SQL QUERIES
+
+
+1.To Create Database :
+
+create database banking
+
+2.To Create Login Table:
+
+create table login
+(
+cLoginId char(16) not null primary key,
+cPassword char(15) not null
+)
+insert into login values('Ashim','sarkar')
+insert into login values('tushar','sarkar')
+
+
+3.To Create SignUp Table :
+
+CREATE table signup
+(
+id int identity(1001,1),
+UserId varchar(20) not null,
+Password varchar(20) not null,
+UserName  char(50) not null,
+Email varchar(50) not null,
+Date varchar(30) not null,
+Phone varchar(20) not null)
+insert into signup values('ashim','1234','ashim','ashim@rediffmail.com','23-11-08','9835939566')
+insert into signup values('tushar','2345',' tushar ',' tushar @gmail.com','01-01-09','9793749377')
+insert into signup values('varun','4567','varun','varun@gmail.com','05-04-09','9905143814')
+
+
+4 .  To Create Product Details Table :
+
+create table productdetails
+(
+ProductCode varchar(10) not null primary key,
+         ProductName varchar(20) not null,
+ProductDescription varchar(1000)
+)
+insert into productdetails values('P1', 'Jeevan Shuraksha','This policy provides life insurance of ur Spouse/Child or near and dear ones')
+insert into productdetails values('P2', 'Education Loan ','Special offer in Education Loan female student can take 0.50% extra rebate ')
+
+
+5 .  To Create  Branches Table :
+
+create table branches
+(
+BranchCode varchar(10) not null primary key,
+BranchName varchar(20) not null,
+Location varchar(1000)
+)
+insert into branches values('B1', 'Ranchi','Main Road near Raj hospital ')
+insert into branches values('B2', 'Hinoo Branch','Pradhan Tower,Near Eyelex multiplex,Hinoo,Ranchi.')
+
+
+6.To Create Service Desk Table :
+
+create table serviceDesk
+(
+ServiceDeskNumber varchar(10) not null,
+BranchCode varchar(20) not null,
+Status varchar(20) not null
+)
+insert into serviceDesk values('S1', 'B1','Active')
+insert into serviceDesk values('S2', 'B2','Active')
+insert into serviceDesk values('S3', 'B3','NOT Active')
+insert into serviceDesk values('S4', 'B4','Active')
+insert into serviceDesk values('S5', 'B5','Active')
+
+
+7 . To Create Banking Officer Table :
+
+create table BankingOfficer
+(
+BOCode varchar(10) not null primary key,
+BOName varchar(20) not null,
+Username varchar(20) not null,
+Password varchar(20) not null
+)
+insert into BankingOfficer values('s1','ashim sarkar',' ashim ','3456')insert into BankingOfficer values('s2','tushar sarkar','tushar','4567')
+
+
+8. To Create Account Table
+
+create table Account
+(
+iRegNo int identity(1,1),
+vAccType varchar(40),
+vAccHold char(15),
+vpassword varchar(20),
+vAddress varchar(30),
+cPhone varchar(20),
+vOccupation char (10),
+mAnnualIncome money,
+mBalance money
+)

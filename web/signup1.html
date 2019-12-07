@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Summit Banking :: An Experience of Getting Every Service</title>
+<script language="javascript">
+
+function valid(form)
+{	
+	
+	var f1=form.username;
+	var f2=form.password;
+        var f3=form.name;
+        var f4=form.email;
+        var f5=form.date;
+        var f6=form.phone;
+        var v1=f1.value;
+        var v2=f2.value;
+        var v3=f3.value;
+        var v4=f4.value;
+        var v5=f5.value;
+        var v6=f6.value;
+	
+	if(v1.length==0)
+	{	alert("Please enter your loginid");
+		f1.focus();
+		return false;
+	}
+	if(v2.length==0)
+	{
+		alert("Please enter a password");
+		f2.focus();
+		return false;
+	}
+        if(v3.length==0)
+	{
+		alert("Please enter your name");
+		f3.focus();
+		return false;
+	}
+        if(v4.length==0)
+	{
+		alert("Please enter a email");
+		f4.focus();
+		return false;
+	}
+        if(v5.length==0)
+	{
+		alert("Please enter the date");
+		f5.focus();
+		return false;
+	}
+        if(v6.length==0)
+	{
+		alert("Please enter your phone no.");
+		f6.focus();
+		return false;
+	}
+	
+
+}
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="content">
+<div id="back">
+<!-- header begins -->
+<div id="header"> 
+        <font color="blue"><h1>Summit Banking</h1></font>
+        <font color="red">We believe in customers we believe in you</font>
+	<div id="logo">
+		<h1><a href="#">Summit Banking</a></h1>
+		<h2><a href="http://www.metamorphozis.com/" id="metamorph">An Experience of Getting Every Service</a></h2>
+	</div>
+  <div id="menu">
+		<ul>
+			 <li><a href="home.html">Home</a></li>
+			<li><a href="loan.html">Products</a></li>
+			<li><a href="login.html">Queue</a></li>
+			<li><a href="admin.html">Official's</a></li>
+			<li><a href="About.html">About</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+		<div class="box">
+			 <div class="box2">
+			<h4><a href="#">Welcome To Our Coupon generation page</a></h4><br />
+                       <h1> You have to fill the fields.</h1>
+ <form onSubmit="return valid(this)" method="POST" action="signup.jsp" >
+<fieldset class="login">
+<legend>Login Information</legend>
+<label for="username" class="hover">Username</label>
+<input type="text" name="username"><br/>
+<label for="password" class="hover">Password</label>
+<input type="password" name="password" >
+</fieldset>
+<fieldset>
+<legend>Personal Information</legend>
+<label for="name">Name</label>
+<input type="text" name="name" ><br/>
+<label for="email">Email</label>
+<input type="text" name="email" ><br/>
+<label for="date">Date</label>
+<input type="text" name="date" ><br/>
+
+<label for="phone">Phone</label>
+<input type="text" name="phone" ><br/>
+
+<INPUT type=Submit name="action" value="Submit">
+</fieldset>
+</form> 
+			
+				</div></div>
+				 
+				 
+				
+	</div>
+	<div id="left">		
+			<h3>Banking</h3>
+			<ul id="arc">
+				  <li>Summit Banking publishes all its Latest News and related information in this section.
+
+Please visit this section to stay up-to-date with public announcements and releases made by Summit Bank</li>
+				 				  
+				  </ul>
+			  
+			<h3>Latest News</h3>
+			<ul>
+				<li id="calendar">			
+				<div id="calendar1">
+					Click Here Latest News 
+				</div>
+			</li>
+		  </ul>
+		  <h3>Latest Offer</h3>
+			<ul>
+				<li><p>Educational and home loan rates has been revised as per RBI direction. <a href="#">More...</a></p></li>
+			</ul>
+			<br />
+	</div>
+<!--content ends -->
+<!--footer begins -->
+	</div>
+
+<div id="footer">
+<p>Copyright &copy; 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">PARTNER</abbr></a> | <a href="#" title="This page validates as CSS"><abbr title="Cascading Style Sheets">SHOPPING</abbr></a></p> 
+	<p>Designed by Ashim Sarkar</a>
+		</p>
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+</body>
+</html>

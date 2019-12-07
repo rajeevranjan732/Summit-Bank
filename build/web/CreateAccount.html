@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Summit Banking :: An Experience of Getting Every Service</title>
+<script language="javascript">
+
+function valid(form)
+{	
+	var field1=form.accType;
+	var field2=form.accHolderName;
+	var field3=form.city;
+	var field4=form.phone;
+	var field5=form.occupation;
+	var field6=form.income;
+	var field7=form.initialDeposit;
+	var field8=form.passwd;
+	var field9=form.conpasswd;
+
+	var v1=field1.value;
+	var v2=field2.value;
+	var v3=field3.value;
+	var v4=field4.value;
+	var v5=field5.value;
+	var v6=field6.value;
+	var v7=field7.value;
+	var v8=field8.value;
+	var v9=field9.value;
+	
+	if(v2.length==0)
+	{	alert("Please enter the name of the account holder");
+		field2.focus();
+		return false;
+	}
+	if(v8.length==0)
+	{
+		alert("Please enter a password");
+		field8.focus();
+		return false;
+	}
+	if(v9.length==0)
+	{
+		alert("Please enter your account password again");
+		field9.focus();
+		return false;
+	}
+	if(v8==v9)
+	{}
+	else
+	{
+		alert("The password and confirm password fields do not match");
+		field8.focus();
+		return false;
+	}
+	if(v3=="default1")
+	{
+		alert("Please choose your city");
+		field3.focus();
+		return false;
+	}
+	if(v4.length==0)
+	{
+		alert("Please enter your phone number");
+		field4.focus();
+		return false;
+	}
+	if(v4.length<11)
+	{
+		alert("The phone number must not be less than 11 Characters");
+		field4.focus();
+		return false;
+	}
+	if(isNaN(v4))
+	{
+		alert("The phone number cannot have characters");
+		field4.focus();
+		return false;
+	}
+		
+	if(v5=="default")
+	{	alert("Please select your occupation");
+		field5.focus();
+		return false;
+	}
+	if(v6=="default1")
+	{
+		alert("Please select your Annual Income level");
+		field6.focus();
+		return false;
+	}
+	if(v7.length==0)
+	{	
+		alert("Please enter the initial deposit amount");
+		field7.focus();
+		return false;
+	}
+	if(v7>1000000)
+	{	alert("The maximum initial deposit is 1000000");
+		field7.focus();
+		return false;
+	}
+
+	if(v7<500)
+	{	alert("The minimum initial deposit is 500");
+		field7.focus();
+		return false;
+	}
+	if(isNaN(v7))
+	{
+		alert("The amount you have entered have character. Amount not valid");
+		field7.focus();
+		return false;
+	}
+	
+
+}
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="content">
+<div id="back">
+<!-- header begins -->
+<div id="header"> 
+        <font color="blue"><h1>Summit Banking</h1></font>
+        <font color="red">We believe in customers we believe in you</font>
+	<div id="logo">
+		<h1><a href="#">Summit Banking</a></h1>
+		<h2><a href="http://www.metamorphozis.com/" id="metamorph">An Experience of Getting Every Service</a></h2>
+	</div>
+  <div id="menu">
+		<ul>
+			 <li><a href="home.html">Home</a></li>
+			<li><a href="loan.html">Products</a></li>
+			<li><a href="login.html">Queue</a></li>
+			<li><a href="admin.html">Official's</a></li>
+			<li><a href="About.html">About</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+		<div class="box">
+			 <div class="box2">
+			<h4><a href="#">Welcome To Our Website</a></h4><br />
+		
+		<form onSubmit="return valid(this)" method="post" action="CreateAccount.jsp">
+<fieldset>
+    <legend align="center"><strong>Create New User</strong></legend>
+<table>
+
+<tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Account Type :</b></td>
+
+<td>
+
+<select name="accType">
+
+<option name="saving">Saving</option>
+
+<option name="Current">Current</option></select></td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Customer's Name :</b></td>
+
+<td><input type=text name="accHolderName" maxlength="20"></td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Account Password :</b></td>
+
+<td><input type=password name="passwd" maxlength="20"></td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Confirm Password :</b></td>
+
+<td><input type=password name="conpasswd" maxlength="20"></td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;City :</b></td>
+
+<td><select name="city">
+
+<option value="New Delhi">New Delhi</option>
+<option value="default1" selected>--Select--</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Chennai">Chennai</option>
+<option value="Kolkata">Kolkata</option>
+<option value="Bangalore">Bangalore</option>
+<option value="Pune">Pune</option>
+<option value="Alleppey">Alleppey</option>
+<option value="Ranchi">Ranchi</option>
+<option value="Patna">Patna</option>
+<option value="Agra">Agra</option>
+<option value="Gwahati">Gwahati</option>
+<option value="Simdega">Simdega</option>
+<option value="Bhagalpur">Bhagalpur</option>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Lucknow">Lucknow</option>
+<option value="Bhopal">Bhopal</option>
+<option value="Puri">Puri</option>
+<option value="Rourkela">Rourkela</option>
+<option value="Bhuvaneshwar">Bhuvaneshwar</option>
+<option value="Gangtok">Gangtok</option>
+<option value="Agartala">Agartala</option>
+<option value="Srinagar">Srinagar</option>
+<option value="Ahemdabad">Ahemdabad</option>
+<option value="Trivandrum">Trivandrum</option>
+<option value="Raipur">Raipur</option>
+<option value="Shimla">Shimla</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Jaipur">Jaipur</option>
+<option value="Dispur">Dispur</option>
+<option value="Others">Others</option>
+
+</td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Phone Number :</b></td>
+
+<td><input type=text name="phone" maxlength="11"></td>
+
+</tr><tr>
+
+<td>&nbsp;&nbsp;&nbsp;(Include 0 before<br>
+&nbsp;&nbsp;&nbsp; mobile number)</td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Occupation :</b></td>
+
+<td><select name="occupation">
+<option value="student">Student</option>
+<option value="default" selected>--Select--</option>
+<option value="Doctor">Doctor</option>
+<option value="Engineer">Engineer</option>
+<option value="IT professional">IT Professional</option>
+<option value="Business">Business</option>
+<option value="Other">Others</option>
+
+</td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Annual Income :</b></td>
+
+<td><select name="income">
+
+<option value="default1" selected>--Select--</option>
+<option value="0-50,000">0-50,000</option>
+<option value="50,001-1,00,000">50,001-1,00,000</option>
+<option value="1,00,001-1,50,000">1,00,001-1,50,000</option>
+<option value="1,50,001-2,00,000">1,50,001-2,00,000</option>
+<option value="2,00,001-3,00,000">2,00,001-3,00,000</option>
+<option value="above 3,00,000">above 3,00,000</option>
+
+</td>
+
+</tr><tr>
+
+<td><b>&nbsp;&nbsp;&nbsp;Initial Deposit:<br>&nbsp;&nbsp;&nbsp;(at least 500)</b></td>
+
+<td><input type=text name="initialDeposit"></td>
+
+</tr><tr>
+
+<td align=left>&nbsp;&nbsp;&nbsp;
+
+<INPUT type=Submit name="action" value="Create"></td>
+
+<td align=right>&nbsp;&nbsp;&nbsp;
+
+<input type=Reset value="Reset"></td>
+
+</tr>
+
+</table>
+</fieldset>
+
+<br>
+
+<a href="admin.html">Back</a>
+
+</form>
+				</div></div>
+				 
+				 
+				
+	</div>
+	<div id="left">		
+			<h3>Banking</h3>
+			<ul id="arc">
+<li>Summit Banking  publishes all its Latest News and related information in this section.
+
+Please visit this section to stay up-to-date with public announcements and releases made by Summit Bank</li>
+				  			  
+				  </ul>
+			  
+			<h3>Latest News</h3>
+			<ul>
+				<li id="calendar">			
+				<div id="calendar1">
+					Click Here Latest News 
+				</div>
+			</li>
+		  </ul>
+		  <h3>Latest Offer</h3>
+			<ul>
+				<li><p>Educational and home loan rates has been revised as per RBI direction. <a href="#">More...</a></p></li>
+			</ul>
+			<br />
+	</div>
+<!--content ends -->
+<!--footer begins -->
+	</div>
+
+<div id="footer">
+<p>Copyright &copy; 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">PARTNER</abbr></a> | <a href="#" title="This page validates as CSS"><abbr title="Cascading Style Sheets">SHOPPING</abbr></a></p> 
+	<p>Designed by Ashim Sarkar</a>
+		</p>
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+</body>
+</html>

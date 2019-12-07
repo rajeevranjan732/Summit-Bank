@@ -1,0 +1,305 @@
+/*
+Design by Ashim
+
+*/
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a:link {
+	color: #B66411;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+
+a:visited {
+	color: #B66411;
+}
+
+body {
+	
+	background: #ffffff url(images/back_all.gif);
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #383838;
+}
+
+#content
+{
+	margin: 0 auto;
+	background: #ffffff;
+	width: 743px;
+	text-align: left;
+}
+
+#main
+{
+width: 743px;
+padding-top: 40px;
+background: url(images/table_back.jpg) no-repeat
+}
+
+#back
+{
+width: 743px;
+padding-left: 10px;
+padding-right: 10px;
+background: #ffffff;
+}
+
+#header {
+		text-align: center;
+               
+	background: url(images/header3.jpg) no-repeat;
+       		
+}
+
+#logo {
+
+width: 490px;
+height: 100px;
+padding-left: 240px;
+padding-right: 40px;
+
+
+	
+}
+
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+#logo H2 a
+{
+font-size: 10px;
+text-transform: uppercase;
+}
+
+
+#menu
+{
+width: 643px;
+height: 48px;
+padding-left: 100px;
+background: url(images/menu.gif) no-repeat;
+}
+
+#menu ul {
+	list-style: none;	
+}
+
+#menu li {
+	
+	display: inline; 
+	
+}
+
+#menu a {
+	float: left;
+	width: 100px;
+	height: 30px;
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 18px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#menu a:hover {
+	width: 100px;
+    height: 30px;
+	color: #FFF8B3;
+	text-decoration: underline;
+	background: url(images/menu_r.gif) repeat-x;
+}
+
+
+
+
+#left
+{
+	width: 213px;
+	margin-left: 5px;
+}
+
+#left H3
+{
+width: 188px;
+height: 27px;
+font-size: 14px;
+font-weight: bold;
+padding-left: 25px;
+padding-top: 15px;
+text-transform: uppercase;
+color: #ffffff;
+background: url(images/title.gif) repeat-x
+}
+
+#left ul {
+	list-style: none;
+	margin-bottom: 10px;
+	background: url(images/title_back.gif) repeat-x top;
+}
+
+
+#left ul {
+	border: 0px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+
+#left li {
+	padding: 4px;
+}
+
+#arc li
+{
+padding-left: 30px;
+}
+
+#left a {
+	color: #B66411;
+}
+#left a:visited {
+	color: #B66411;
+}
+
+#left p
+{
+padding: 10px;
+}
+
+#calendar1 {
+	padding: 20px 10px 20px 10px;
+}
+
+#calendar table {
+	width: 100%;
+	text-align: center;
+}
+
+#calendar thead {
+
+}
+
+#calendar tbody td {
+	border: 1px solid #F1F1F1;
+}
+
+#calendar #prev {
+	text-align: left;
+}
+
+#calendar #next {
+	text-align: right;
+}
+
+#calendar tfoot a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#calendar #now {
+	background: #696969;
+	border: 1px solid #ff0000;
+	font-weight: bold;
+	color: #ffffff
+}
+
+#right
+{
+float: right;
+width: 500px;
+padding-right: 10px;
+}
+
+#right H4
+{
+	margin: 0;
+	padding: 0px;
+	font-size: 14px;
+	color: #C5C5C5;
+	text-transform: uppercase;
+}
+
+#right a
+{
+color: #B66411;
+text-decoration: none;
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+#right h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: #B66411;
+}
+
+#right ol, #right ul
+{
+margin-left: 30px;
+}
+
+
+.date {
+	text-align: right;
+	color: #B66411;
+	font-size: 11px;
+}
+
+.date a {
+	color: #B66411;
+}
+
+#right .box
+{
+border: 1px solid #FCAD08;
+width: 493px;
+margin-bottom: 20px;
+}
+
+#right .box2
+{
+border: 1px solid #ffffff;
+background: #ffffff url(images/box_back.gif) repeat-x top;
+width: 471px;
+padding: 10px;
+}
+
+#footer {
+	height: 49px;
+	width: 743px;
+	clear: both;
+	padding-top: 30px;
+	background: url(images/footer.gif) repeat-x bottom;
+	border-top: 4px solid #1F61B7;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#footer a {
+	color: #ffffff;
+}
